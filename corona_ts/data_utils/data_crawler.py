@@ -49,6 +49,7 @@ def time_series_formatter(df: pd.DataFrame) -> pd.DataFrame:
             "country",
             "region",
             "sub_region",
+            "population",
             "lat",
             "long",
             "date",
@@ -126,4 +127,5 @@ def load_data() -> pd.DataFrame:
 if __name__ == "__main__":
     # for testing only
     df = load_data()
+    df.to_csv('/media/wwymak/Storage/coronawhy/covid_cases_timeseries.csv', index=False)
     df.head()
